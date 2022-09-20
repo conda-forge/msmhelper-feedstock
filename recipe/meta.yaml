@@ -1,5 +1,5 @@
 {% set name = "msmhelper" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/msmhelper-{{ version }}.tar.gz
-  sha256: cc40468ef5cda0d21f94e25fcea232d6d03ab34b279cc05c9b0892a2162b7a94
+  sha256: 2bcb664fe677ef31a499a679078b2006096661013e7077d1cce91a2a2e92a893
 
 build:
   noarch: python
@@ -36,7 +36,7 @@ test:
 
 about:
   home: https://github.com/moldyn/msmhelper
-  summary: 'Toolbox for Markov State Modeling of Protein Dynamics'
+  summary: Toolbox for Markov State Modeling of Protein Dynamics
   license: BSD-3-Clause
   license_file: LICENSE
   doc_url: https://moldyn.github.io/msmhelper/
