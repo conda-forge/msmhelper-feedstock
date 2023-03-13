@@ -1,5 +1,5 @@
 {% set name = "msmhelper" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/msmhelper-{{ version }}.tar.gz
-  sha256: cf07964eb74feb4074c6c091a460b4d2e13d05635faeb9a3d7aa726b850f5c13
+  sha256: d6b72ba6e7182f64d153f823487b60429636bf7e2a02e983237b8308b5e55bb0
 
 build:
   noarch: python
