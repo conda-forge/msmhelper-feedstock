@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/msmhelper-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/msmhelper-{{ version }}.tar.gz
   sha256: 3c442aa49034c1d9ef6c117605c32b161192c0c679f57cdb6ca990bcae7f83a0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - click
     - decorit
@@ -25,7 +25,7 @@ requirements:
     - numpy
     - pandas
     - prettypyplot
-    - python >=3.7
+    - python >={{ python_min }}
     - scipy
 
 test:
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/moldyn/msmhelper
